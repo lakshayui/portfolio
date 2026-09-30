@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f6fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* dark mode colors (JS adds "dark" class on body) */
+body.dark {
+  background: #12141c;
+  color: #eee;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body.dark .navbar {
+  background: #1b1e2b;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a:hover {
+  color: #4f46e5;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.theme-btn,
+.menu-btn {
+  padding: 6px 14px;
+  border: 1px solid #4f46e5;
+  background: transparent;
+  color: #4f46e5;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #4f46e5;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-right: 10px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #3730a3;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+}
+
+.btn-outline:hover {
+  background: #4f46e5;
+  color: #fff;
+}
+
+/* hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 90px 8%;
+}
+
+.hello {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+}
+
+.hero-text h2 {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 5px 0 15px;
+}
+
+.hero-desc {
+  max-width: 480px;
+  margin-bottom: 15px;
+}
+
+.hero-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 260px;
+}
+
+body.dark .hero-box {
+  background: #1b1e2b;
+}
+
+.hero-box h3 {
+  color: #16a34a;
+  margin-bottom: 8px;
+}
+
+/* common section styles */
+.projects,
+.about,
+.contact {
+  padding: 70px 8%;
+}
+
+.title {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+/* projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+body.dark .project-card {
+  background: #1b1e2b;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-img {
+  height: 180px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* change these to real screenshots later:
+   background: url(images/tidepool.png) center/cover; */
+.img1 { background: linear-gradient(135deg, #0e9aa7, #3a6ff7); }
+.img2 { background: linear-gradient(135deg, #5b3df5, #b06af5); }
+.img3 { background: linear-gradient(135deg, #ff9a3d, #ff5e7e); }
+.img4 { background: linear-gradient(135deg, #12b5a6, #5bd98c); }
+
+.project-card h3 {
+  margin-bottom: 5px;
+}
+
+.tech {
+  font-size: 14px;
+  color: #777;
+  margin: 8px 0;
+}
+
+/* about */
+.about p {
+  max-width: 650px;
+  margin-bottom: 20px;
+}
+
+.about h3 {
+  margin-bottom: 10px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills li {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* contact */
+.contact {
+  text-align: center;
+  background: #e0e7ff;
+}
+
+body.dark .contact {
+  background: #1b1e2b;
+}
+
+.contact p {
+  margin-bottom: 10px;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: left;
+    padding: 50px 6%;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px 8%;
+    gap: 15px;
+  }
+
+  body.dark .nav-links {
+    background: #1b1e2b;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
